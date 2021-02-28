@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" FileType="Snapshot" FileOID="1.2.276.0.76.3.1.3.220.1.1.2.7.25489" CreationDateTime="2020-02-14T11:10:31.000+01:00" ODMVersion="1.3.2" SourceSystem="SMA:T" SourceSystemVersion="4.1.1">
+    <Study OID="1.2.276.0.76.3.1.3.220.1.1.2.7.25489.1">
+        <GlobalVariables>
+            <StudyName>SEED ClinicalData ECT</StudyName>
+            <StudyDescription>Erhebung des Krankheitsverlaufs im Rahmen des SEED Projektes der translationalen Psychiatrie</StudyDescription>
+            <ProtocolName>SEED Module A3</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="1.2.276.0.76.3.1.3.220.1.1.2.7.25489.2" Name="MD.1">
+            <Protocol>
+                <StudyEventRef OrderNumber="1" Mandatory="No" StudyEventOID="1.2.276.0.76.3.1.3.220.1.1.2.7.25489.1.1"/>
+            </Protocol>
+            <StudyEventDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.25489.1.1" Name="SE.1" Repeating="No" Type="Common">
+                <FormRef OrderNumber="1" Mandatory="No" FormOID="1.2.276.0.76.3.1.3.220.1.1.2.7"/>
+            </StudyEventDef>
+            <FormDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7" Name="SEED ClinicalData ECT" Repeating="No">
+                <Description>
+                    <TranslatedText xml:lang="de-DE">Erhebung des Krankheitsverlaufs im Rahmen des SEED Projektes der translationalen Psychiatrie</TranslatedText>
+                </Description>
+				<ItemGroupRef ItemGroupOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1" OrderNumber="1" Mandatory="No"/>
+				<ItemGroupRef ItemGroupOID="1.2.276.0.76.3.1.3.220.1.1.2.7.2" OrderNumber="2" Mandatory="No"/>
+            </FormDef>
+			<ItemGroupDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1" Name="ECT" Repeating="No">
+                <ItemRef OrderNumber="1" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.1"/>
+                <ItemRef OrderNumber="2" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.2"/>
+                <ItemRef OrderNumber="3" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.3"/>
+                <ItemRef OrderNumber="4" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.4"/>
+                <ItemRef OrderNumber="5" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.5"/>
+                <ItemRef OrderNumber="6" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.6"/>
+                <ItemRef OrderNumber="7" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.7"/>
+                <ItemRef OrderNumber="8" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.8"/>
+                <ItemRef OrderNumber="9" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.9"/>
+                <ItemRef OrderNumber="10" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.10"/>
+                <ItemRef OrderNumber="11" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.11"/>
+            </ItemGroupDef>
+			<ItemGroupDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.2" Name="Administration Untersucher" Repeating="No" Comment="">
+                <ItemRef OrderNumber="1" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.2.1"/>
+                <ItemRef OrderNumber="2" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.7.2.2"/>
+            </ItemGroupDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.1" Name="I.7.1.1" DataType="string">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">EKT Nummer</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.2" Name="I.7.1.2" DataType="string">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Stimulus-Art</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.3" Name="I.7.1.3" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Energie</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.4" Name="I.7.1.4" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Frequenz</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.5" Name="I.7.1.5" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Statische Impedanz</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.6" Name="I.7.1.6" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">EEG</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.7" Name="I.7.1.7" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">EMG</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.8" Name="I.7.1.8" DataType="float">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Postiktaler Unterdrückungs-Index</TranslatedText>
+                </Question>
+				<Alias Context="EHR" Name="{'float':'2'}"/>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.9" Name="I.7.1.9" DataType="float">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Mar. Erzeugte Kohärenz</TranslatedText>
+                </Question>
+                <Alias Context="EHR" Name="{'float':'2'}"/>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.10" Name="I.7.1.10" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Herzfrequenz pre-iktal</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.1.11" Name="I.7.1.11" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Max- gemessene Herzfrequenz</TranslatedText>
+                </Question>
+            </ItemDef>
+			<ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.2.1" Name="I.7.2.1" DataType="date">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Datum</TranslatedText>
+                </Question>
+                <Alias Context="UMLS CUI [1]" Name="C0011008"/>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.7.2.2" Name="I.7.2.2" DataType="user">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Unterschrift</TranslatedText>
+                </Question>
+                <Alias Context="UMLS CUI [1]" Name="C1519316"/>
+            </ItemDef>
+        </MetaDataVersion>
+    </Study>
+</ODM>

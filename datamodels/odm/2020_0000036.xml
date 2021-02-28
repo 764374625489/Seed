@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" FileType="Snapshot" FileOID="1.2.276.0.76.3.1.3.220.1.1.2.8.25489" CreationDateTime="2020-02-14T17:45:11.000+01:00" ODMVersion="1.3.2" SourceSystem="SMA:T" SourceSystemVersion="4.1.1">
+    <Study OID="1.2.276.0.76.3.1.3.220.1.1.2.8.25489.1">
+        <GlobalVariables>
+            <StudyName>SEED ClinicalData Classification</StudyName>
+            <StudyDescription>Erhebung des Krankheitsverlaufs im Rahmen des SEED Projektes der translationalen Psychiatrie</StudyDescription>
+            <ProtocolName>Seed Module A2</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="1.2.276.0.76.3.1.3.220.1.1.2.8.25489.2" Name="MD.1">
+            <Protocol>
+                <StudyEventRef OrderNumber="1" Mandatory="No" StudyEventOID="1.2.276.0.76.3.1.3.220.1.1.2.8.25489.1.1"/>
+            </Protocol>
+            <StudyEventDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.25489.1.1" Name="SE.1" Repeating="No" Type="Common">
+                <FormRef OrderNumber="1" Mandatory="No" FormOID="1.2.276.0.76.3.1.3.220.1.1.2.8"/>
+            </StudyEventDef>
+            <FormDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8" Name="SEED ClinicalData Classification" Repeating="No">
+                <Description>
+                    <TranslatedText xml:lang="de-DE">Erhebung des Krankheitsverlaufs im Rahmen des SEED Projektes der translationalen Psychiatrie</TranslatedText>
+                </Description>
+				<ItemGroupRef ItemGroupOID="1.2.276.0.76.3.1.3.220.1.1.2.8.1" OrderNumber="1" Mandatory="No"/>
+				<ItemGroupRef ItemGroupOID="1.2.276.0.76.3.1.3.220.1.1.2.8.2" OrderNumber="2" Mandatory="No"/>
+            </FormDef>
+			<ItemGroupDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.1" Name="PV Einstufung" Repeating="No">
+                <ItemRef OrderNumber="1" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.1"/>
+                <ItemRef OrderNumber="2" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.2"/>
+            </ItemGroupDef>
+			<ItemGroupDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.2" Name="Administration Untersucher" Repeating="No" Comment="">
+                <ItemRef OrderNumber="1" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.8.2.1"/>
+                <ItemRef OrderNumber="2" Mandatory="No" ItemOID="1.2.276.0.76.3.1.3.220.1.1.2.8.2.2"/>
+            </ItemGroupDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.1" Name="I.8.1.1" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Einstufung</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.1.1"/>
+				<Alias Context="UIC" Name="Dropdown"/>
+                <Alias Context="EHR" Name="{'lid':'PSYCHF44','sub':'26727017.2.1.1','type':'DROPDOWN01','align':'left'}"/>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.2" Name="I.8.1.2" DataType="integer">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Intensivmerkmale</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.2.1"/>
+				<Alias Context="UIC" Name="Dropdown"/>
+                <Alias Context="EHR" Name="{'lid':'PSYCHF44','sub':'26727017.2.2.1','type':'DROPDOWN01','align':'left'}"/>
+            </ItemDef>
+			<ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.2.1" Name="I.8.2.1" DataType="date">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Datum</TranslatedText>
+                </Question>
+                <Alias Context="UMLS CUI [1]" Name="C0011008"/>
+            </ItemDef>
+            <ItemDef OID="1.2.276.0.76.3.1.3.220.1.1.2.8.2.2" Name="I.8.2.2" DataType="user">
+                <Question>
+                    <TranslatedText xml:lang="de-DE">Unterschrift</TranslatedText>
+                </Question>
+                <Alias Context="UMLS CUI [1]" Name="C1519316"/>
+            </ItemDef>
+            <CodeList OID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.1.1" Name="C.8.1.1.1" DataType="integer">
+                <CodeListItem CodedValue="1">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Intensivbehandlung (A1)</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.1.1.1"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="2">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Intensivbehandlung (A2)</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.1.1.2"/>
+                </CodeListItem>
+            </CodeList>
+            <CodeList OID="1.2.276.0.76.3.1.3.220.1.1.2.8.1.2.1" Name="C.8.1.2.1" DataType="integer">
+                <CodeListItem CodedValue="1">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Anwendung von Sicherungsmaßnahmen</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.1"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="2">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Schwere Antriebsstörung (gesteigert oder reduziert)</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.2"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="3">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Vitalgefährdung durch somatische Komplikationen</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.3"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="4">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Akute Selbstgefährdung durch Suizidalität oder schwer selbstschädigendes Verhalten</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.4"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="5">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Keine eigenständige Flüssigkeits-/Nahrungsaufnahme</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.5"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="6">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Akute Fremdgefährdung</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.6"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="7">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Akute Selbstgefährdung durch fehlende Orientierung oder Realitätsverkennung (z.B. Stürze ohne Fremdeinfluss oder durchgängige Nahrungsverweigerung bei Demenz)</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.7"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="8">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Deutlich erhöhter Pflegeaufwand</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.8"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="9">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Erforderliche Maßnahmen zur Gefahrabwendung</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.9"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="10">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Erhöhter Einzelbetreuungsaufwand wegen mangelnder Gruppenfähigkeit</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.10"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="11">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Fremdaggressives Verhalten mit deutlicher Beeinträchtigung des Gruppenmilieus</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.11"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="12">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Selbstgefährdung</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.12"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="13">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Störungsbedingt nicht einschätzbarer, nicht kooperationsfähiger Patient</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.13"/>
+                </CodeListItem>
+				<CodeListItem CodedValue="14">
+                    <Decode>
+                        <TranslatedText xml:lang="de-DE">Substanzbedingt erhöhter Betreuungsbedarf</TranslatedText>
+                    </Decode>
+                    <Alias Context="SMA:T" Name="C.8.1.2.1.14"/>
+                </CodeListItem>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>
